@@ -1,0 +1,36 @@
+<!--pages/datail-video/index.wxml-->
+<wxs src="/utils/format.wxs" module="format"></wxs>
+<!-- mvURLInfo -->
+<video src="{{mvURLInfo.url}}" 
+       autoplay
+       danmu-list="{{danmuList}}"
+       referrer-policy="origin"
+       >
+</video>
+
+
+<!-- mvDetail -->
+<view class="mvDetail">
+  <view class="title"> {{mvDetail.desc}} </view>
+  <view> {{mvDetail.artistName}} -</view>
+  <view> {{format.formatCount(mvDetail.duration)  }}次播放 - {{mvDetail.publishTime}}</view>
+</view>
+
+
+<!-- 推荐视频区域 -->
+<view class="relRelatedMVList">
+  <view class="top">推荐视频</view>
+  <view class="list" wx:for="{{relRelatedMV}}" wx:key="id">
+
+    <view class="left">
+      <image src="{{item.coverUrl}}" mode="widthFix"></image>
+      <view>{{format.formatCount(item.durationms)}} </view>
+    </view>
+
+    <view class="right">
+      <view>{{item.title}}</view>
+      <text>{{item.aliaName || defaultData.author }}</text>
+    </view>
+
+  </view>
+</view>

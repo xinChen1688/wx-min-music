@@ -1,0 +1,100 @@
+/* pages/music-paly/index.wxss */
+page {
+  color: #fff; 
+}
+
+.bg-image,
+.bg-cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+.bg-cover {
+  background: rgba(0, 0, 0, .1);
+  backdrop-filter: blur(13px); 
+  display: none;
+}
+.controlBgCoverShow{
+  display: block;
+}
+
+
+.nav-title {
+  color: #999;
+  display: flex;
+  font-size: 28rpx;
+  justify-content: center;
+}
+
+.nav-title .divider {
+  margin: 0 10rpx;
+}
+
+.nav-title .active {
+  color: #fff;
+}
+
+/* 内容样式 */
+.music {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 28rpx;
+  box-sizing: border-box; 
+}
+
+/* 内容区 */
+.music .music-detail {
+  text-align: center;
+}
+
+.music .music-detail .title {
+  font-size: 32rpx;
+  font-weight: 800;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.music .music-detail .author {
+  margin: 10rpx 0;
+  font-size: 28rpx;
+}
+
+/* <!-- 歌词区 --> */
+.music .music-speech {
+  flex: 1; 
+  text-align: center;
+}
+
+/* <!-- 进度条区 --> */
+.music .music-progress .time {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30rpx;
+}
+
+/* <!-- 控制区 --> */
+.music .music-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.music .music-control .btn {
+  width: 60rpx;
+  height: 60rpx;
+  display: block; 
+
+}
+
+.music .music-control .btn+.btn-pause {
+  /* font-size: 50rxp; */
+  width: 130rpx;
+  height: 130rpx;
+
+}

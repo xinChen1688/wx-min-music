@@ -1,0 +1,34 @@
+/* pages/home-music/index.wxss */
+
+page{
+  padding: 0 20rpx;
+}
+.van-search{
+  padding: 10px 0 !important;
+
+}
+.van-search__content{
+  background: #fafafa !important;
+} 
+
+.swiper{
+  border-radius: 15rpx;
+  overflow: hidden;
+  transform: translateY(0);
+  position: relative;
+}
+
+.swiper-image{
+  width: 100%;
+}
+
+ .bannerTypeTitle{
+   border: none; 
+   position: absolute;
+   bottom: 0;
+   right: 0;
+   font-size: 24rpx;
+   padding: 5rpx 15rpx;
+   border-top-left-radius: 10rpx;
+   color: #fff;
+ }

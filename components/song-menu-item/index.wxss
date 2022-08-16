@@ -1,0 +1,38 @@
+/* components/song-menu-item/index.wxss */
+
+
+.imageInfo {
+  overflow: hidden;
+  border-radius: 10rpx;
+  position: relative; 
+}
+
+.imageInfo .image {
+  width: 100%;
+  display: block; 
+}
+
+.imageInfo .playSum{
+  position: absolute;
+  color: #fff;
+  top: 10rpx;
+  right: 10rpx;
+  font-size: 24rpx;
+  background: rgba(102, 101, 101, 0.2);
+  padding:  5rpx 10rpx;
+  border-radius: 20rpx;
+}
+.icon{
+  width: 20rpx;
+  height: 20rpx;
+}
+
+.bottonConent{
+  font-size: 24rpx;
+  white-space: normal;
+  margin-top: 5rpx;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; 
+}

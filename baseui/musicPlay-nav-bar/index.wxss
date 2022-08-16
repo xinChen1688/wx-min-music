@@ -1,0 +1,44 @@
+/* baseui/musicPlay-nav-bar/index.wxss */
+page {
+  color: #fff;
+  padding: 20rpx;
+}
+
+.topNav {
+  background: #f20;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  height: 88rpx; 
+  align-items: center;
+}
+
+
+.nav-bar .icon {
+  width: 44rpx; 
+  vertical-align: middle;
+}
+
+.nav-bar .center {
+  flex: 1;
+  text-align: center;
+}
+.left-slot:empty + .incoView{
+  display: block;
+}
+.incoView{
+  display: none;
+}
+
+.center-solt:empty + .center-conent{
+  display: block;
+}
+.center-conent{
+  display: none;
+}
+
+.nav-bar .right{ 
+  width: 44rpx;  
+}  

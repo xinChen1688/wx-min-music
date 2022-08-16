@@ -1,0 +1,21 @@
+<!--components/song-menu-ranking/index.wxml-->
+<wxs src="/utils/format.wxs" module="format"></wxs>
+<view class="rankingList" wx:for="{{menuRanking}}" wx:key="*this" data-sum="{{item}}" bindtap="rankingClick">
+  <view class="list">
+    <view class="left">
+      <view class="title">{{item.name}}</view>
+      <view class="item" wx:for="{{item.tracks}}" wx:key="*this">
+        <view class="listContent"> {{index+1}}. {{item.first}} 
+          <text class="colorText"> - {{item.second}}</text>
+        </view>
+      </view>
+    </view>
+
+
+    <view class="right">
+      <image class="image" src="{{item.coverImgUrl}}"></image>
+      <view class="playSum"> {{format.formatCount(item.playCount)}}</view>
+    </view>
+
+  </view>
+</view>

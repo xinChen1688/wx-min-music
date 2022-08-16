@@ -1,0 +1,11 @@
+
+<view class="video">
+  <view wx:for="{{topMvs}}" wx:key="id" class="item">
+    <video-item-v1 item="{{item}}" 
+                   bindtap="bandleVmItemClick"
+                   data-item="{{item}}"
+                   >
+    </video-item-v1>
+  </view>
+</view>
+<view wx:if="{{!hasMore}}">我也是有底线的~~</view>

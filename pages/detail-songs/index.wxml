@@ -1,0 +1,46 @@
+<!--pages/detail-songs/index.wxml-->
+<wxs src="/utils/format.wxs" module="ormat"></wxs>
+
+<view class="topConent" wx:if="{{!rankingInfo.tracks}}">
+  <!-- 背景 -->
+  <image class="imageCover" mode="aspectFill" src="{{rankingInfo.coverImgUrl}}"></image>
+  <view class="bagCover"></view>
+  <!-- 内容 -->
+
+  <view class="conent">
+
+    <view class="baseurl">
+      <image class="conentImage" src="{{rankingInfo.coverImgUrl}}" mode="aspectFill"></image>
+      <view class="nickname">
+        <view class="itile">{{rankingInfo.name}} </view>
+        <view class="nicknameAvor">-- {{rankingInfo.creator.nickname}} </view>
+      </view>
+    </view>
+
+    <wxs src="/utils/format.wxs" module="format"></wxs>
+
+    <view class="love">
+      <view class="icon1">
+        <image class="incoInfo" src="/assets/images/icons/favor_icon.png"></image>
+        <text>{{format.formatCount(rankingInfo.playCount)}}</text>
+      </view>
+      <view class="icon2">
+        <image class="incoInfo" src="/assets/images/icons/share_icon.png"></image>
+        <text>分享</text>
+      </view>
+
+    </view>
+  </view>
+
+
+</view>
+
+
+
+
+
+
+
+<area-header title="{{rankingInfo.name.length < 6 ? rankingInfo.name : '歌单的数据'}}" showRight=""></area-header>
+<!-- v2 -->
+<ranking-tracks-list-v2 tracks="{{rankingInfo.tracks||rankingInfo.tags}}"></ranking-tracks-list-v2>

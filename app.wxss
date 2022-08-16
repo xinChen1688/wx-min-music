@@ -1,0 +1,9 @@
+page{
+  background-color: #fafafa;
+  box-sizing: border-box;
+}
+
+.miniTextColor{
+  font-size: 24rpx;
+  color: #777;
+}

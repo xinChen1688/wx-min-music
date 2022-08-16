@@ -1,0 +1,21 @@
+<!--components/ranking-tracks-list-v2/index.wxml-->
+<view class="song-list">
+  <block wx:for="{{tracks}}" wx:key="item">
+    <view class="item" bindtap="goToMusicPaly" data-item="{{item}}">
+
+      <view class="index">
+        {{index+1}}
+      </view>
+
+      <view class="contentText">
+      <view class="top">{{item.first||item}}</view>
+      <view class="bottom miniText">
+      <image class="icon" src="/assets/images/icons/sq_icon.png"></image>
+      {{item.second||item}}</view> 
+         
+      </view>
+
+    </view>
+
+  </block>
+</view>

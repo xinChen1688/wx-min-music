@@ -1,0 +1,6 @@
+<!--components/song-menu-recommend/index.wxml-->
+<view wx:if="{{recommendSpmgs.length > 0}}">
+  <block wx:for="{{recommendSpmgsFilter}}" wx:key="id">
+    <song-itemv1 item="{{item}}"></song-itemv1>
+  </block>
+</view> 

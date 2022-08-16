@@ -1,0 +1,67 @@
+<!--pages/home-music/index.wxml-->
+
+<!-- 搜索区 -->
+<van-search 
+disabled
+background="#fafafa"
+shape="round"
+placeholder="搜索您喜欢的歌曲 ~"
+bindtap="handleSearchClick"
+/>
+<!-- 轮播图区 -->
+<swiper class="swiper" 
+        autoplay 	
+        interval="3000" 
+        circular  
+        indicator-dots 	
+        indicator-active-color="#666" 
+        style="height: {{swiperHeight}}px;"
+        >
+<block wx:for="{{banner}}" wx:key="id" >
+  <swiper-item>
+    <image src="{{item.pic}}" 
+           mode="widthFix"
+           bindload="handSwiperImgHeight"
+           class="swiper-image"
+           >
+    </image>
+    <text class="bannerTypeTitle" 
+          style="background:{{item.titleColor}};"
+          >{{item.typeTitle}} </text>
+  </swiper-item>
+</block>
+</swiper>
+
+<!-- 推荐歌曲 -->
+<area-header title="推荐歌曲"  bind:click="recommendClick" data-new="{{menuRanking[0]}}"></area-header> 
+<song-menu-recommend 
+                    recommendSpmgs="{{recommendSpmgs}}" 
+                    wx:if="{{recommendSpmgs.length > 0}}"
+                    ></song-menu-recommend>
+<!-- 热门歌单列表 -->
+<song-menu-area songMenuHot="{{songMenuHot}}" title="热门新歌"
+                 wx:if="{{songMenuHot.length > 0}}"
+                 data-hot="{{menuRanking[1]}}" 
+                 bindtap="hotClick"
+                 ></song-menu-area>
+<!-- 推荐歌单 -->
+<song-menu-area songMenuHot="{{recommendationsongMenu}}" title="推荐歌单"
+                 wx:if="{{recommendationsongMenu.length > 0}}"
+                 data-hot="{{menuRanking[2]}}" 
+                 bindtap="muisClick"
+                 ></song-menu-area>
+<!-- 巅峰榜 -->
+<area-header title="巅峰榜" showRight=""></area-header>
+<song-menu-ranking 
+                  menuRanking="{{menuRanking}}" 
+                  bind:click="rankingClicks"
+                  ></song-menu-ranking>
+
+
+
+
+
+
+
+
+

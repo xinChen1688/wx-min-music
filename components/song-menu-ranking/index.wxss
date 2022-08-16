@@ -1,0 +1,66 @@
+/* components/song-menu-ranking/index.wxss */
+.rankingList {
+  display: flex;
+  flex-direction: column;
+}
+
+.rankingList .list {
+  background: #eee;
+  border-radius: 15rpx;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between; 
+  margin: 10rpx 0; 
+}
+.rankingList:nth-child(2) .right{
+  color:#00f; 
+  height: 220rpx;
+}
+
+.rankingList .left {
+  margin-left: 20rpx;
+  align-self: center;
+}
+.rankingList .left .title{
+  font-weight: 900;
+  font-size: 34rpx;
+  margin-bottom: 20rpx;
+}
+.rankingList .left .item{
+  font-weight: 600;
+  font-size: 24rpx;
+  margin: 10rpx 0; 
+  white-space: nowrap;
+  width: 450rpx;
+}
+
+.rankingList .left .item .listContent{
+  text-overflow: ellipsis;
+  overflow: hidden; 
+}
+
+.rankingList .right {
+  position: relative;
+}
+
+.rankingList .right .image {
+  width: 220rpx;
+  height: 220rpx;
+  display: block; 
+}
+
+.rankingList .right .playSum {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, .4);
+  color: #fff;
+  font-size: 24rpx;
+  /* display: block; */
+  padding: 6rpx 8rpx;
+  border-radius: 10rpx;
+
+}
+.colorText{
+  color: #777;
+}

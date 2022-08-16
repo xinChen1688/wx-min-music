@@ -1,0 +1,84 @@
+/* pages/datail-video/index.wxss */
+/* mvURLInfo */
+
+page{
+  padding-top: 480rpx;
+}
+
+video{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+}
+
+
+
+
+
+/* mvDetail */
+.mvDetail{
+  font-size: 24rpx;
+  color: #666;
+  margin-bottom: 40rpx;
+  padding: 0 20rpx;
+
+}
+.mvDetail .title{
+  font-size: 35rpx;
+  font-weight: 800;
+  color: #000;
+}
+.mvDetail view{
+  margin: 10rpx 0;
+}
+
+/* relRelatedMVList */
+.relRelatedMVList{
+  padding: 0 10rpx;
+}
+.relRelatedMVList .top {
+  font-weight: 700;
+  margin: 10rpx;
+}
+
+.relRelatedMVList .list {
+  display: flex;
+  padding: 10rpx;
+}
+
+.relRelatedMVList .list .left {
+  width: 250rpx;
+  position: relative;
+}
+
+.relRelatedMVList .list image {
+  width: 250rpx;
+  border-radius: 10rpx;
+}
+
+.relRelatedMVList .list .left view {
+  position: absolute;
+  bottom: 20rpx;
+  right: 10rpx;
+  color: #fff;
+  font-size: 24rpx;
+  overflow: hidden;
+}
+
+.relRelatedMVList .right{
+  padding: 0 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.relRelatedMVList .right view{
+  font-size: 28rpx;
+  font-weight: 600;
+}
+
+.relRelatedMVList .right text{
+  font-size: 24rpx;
+  color: rgb(117, 113, 113);
+}

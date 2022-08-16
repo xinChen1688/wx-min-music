@@ -1,0 +1,29 @@
+/* components/area-header/index.wxss */
+.heaer {
+  margin: 40rpx 0 20rpx 0;
+}
+
+.heaer,
+.default {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heaer .title {
+  font-size: 34rpx;
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.heaer .right {
+  font-size: 28rpx;
+  color: #777;
+}
+
+.heaer .icon {
+  width: 50rpx;
+  height: 50rpx;
+}

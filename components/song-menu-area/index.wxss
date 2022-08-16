@@ -1,0 +1,14 @@
+/* components/song-menu-area/index.wxss */
+.scroll{
+  white-space: nowrap;  
+  margin-left: -20rpx;
+}
+.item{
+  width: 220rpx; 
+  margin-left: 20rpx;
+  display: inline-block;
+  vertical-align: top; 
+}
+.item:nth-last-child(1){
+  margin-right: 20rpx;
+}

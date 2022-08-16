@@ -1,0 +1,35 @@
+<!--pages/detail-search/index.wxml-->
+<van-search class="search" background="#f7f7f7" shape="round" bind:change="handServieChange" value="{{searchValue}}" bind:search="handleSearchAciton" show-action="{{searchValue}}" />
+
+<!-- 热门搜索 -->
+<view class="hot" wx:if="{{!searchValue.length && !matchingMiuseList.length}}">
+  <area-header title="热门搜索" showRight=""></area-header>
+  <view class="keyword">
+    <block wx:for="{{hotKeywords}}" wx:key="id">
+      <text class="textConent" bindtap="watchHotClick" data-list="{{item}}">{{item.first}}</text>
+    </block>
+  </view>
+</view>
+
+<!-- 建议搜索 -->
+<view class="suggest" wx:else > 
+  <view class="tiile" wx:if="{{searchValue}}">搜索 : {{textNull||searchValue}} </view>
+  <block wx:for="{{suuggestSpmgsNode}}" wx:key="id" wx:if="{{infoShow}}" >
+    <view class="list" bindtap="listClick" data-index="{{index}}">
+      <image class="inco" src="/assets/images/icons/search_icon.png"></image>
+      <rich-text nodes="{{item}}"></rich-text>
+    </view>
+  </block>
+</view> 
+<!-- 搜索结果 -->
+<block wx:if="{{resultSongs.length>0}}">
+  <area-header title="最佳匹配" showRight="" style="color: #777;"></area-header>
+  <block wx:for="{{resultSongs}}" wx:key="id"> 
+    <view class="listMatching">
+      <text>{{index}}--</text>
+      <text>{{item.al.name}}--</text>
+      <text>--{{item.ar[0].name}}</text>
+    </view>
+
+  </block>
+</block>

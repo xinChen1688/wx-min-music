@@ -1,0 +1,19 @@
+<!--components/area-header/index.wxml-->
+<view class="heaer">
+
+  <view class="title">{{title}}</view>
+
+
+<!-- 点击 -->
+  <view class="right" wx:if="{{showRight}}" bindtap="handleRighTClick">
+    <view class="slot">
+      <slot></slot>
+    </view>
+    <view class="default" wx:if="{{slotInfo}}">
+      <text>{{rightText}}</text>
+      <image class="icon" src="/assets/images/icons/arrow-right.png"></image>
+    </view>
+
+  </view>
+
+</view>

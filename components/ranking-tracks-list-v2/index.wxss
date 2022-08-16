@@ -1,0 +1,32 @@
+/* components/ranking-tracks-list-v2/index.wxss */
+.item { 
+  display: flex;
+  margin: 20rpx 0;
+}
+.item .index{
+  padding: 10rpx;
+  font-weight: 600;
+  font-size: 28rpx;
+  margin-right: 10rpx;
+}
+.item .contentText{
+  display: flex;
+  flex-direction: column;
+}
+.item .top{
+  font-weight: 700;
+}
+.item .bottom{
+  font-size: 24rpx; 
+  display: flex;
+  align-items: center;
+}
+.item .icon{
+  margin-right: 10rpx;
+  width: 35rpx;
+  height: 25rpx;
+  display: block;
+}
+.miniText{
+  color: #777;
+}
