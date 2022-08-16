@@ -1,14 +1,15 @@
 {
   "name": "miniprogram-5",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "a music",
   "main": ".eslintrc.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "XinChen1688",
   "license": "ISC",
+  "homepage": "not have",
   "dependencies": {
     "@vant/weapp": "^1.10.4",
     "hy-event-store": "^1.2.1"
