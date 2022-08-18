@@ -3,7 +3,7 @@
 <scroll-view scroll-x class="scroll" style="width:{{screenWindth}}px;"
              show-scrollbar="" enhanced
   >
-  <block wx:for="{{songMenuHot}}" wx:key="id">
+  <block wx:for="{{songMenuHot}}" wx:key="index">
     <view class="item">
       <song-menu-item item="{{item}}"
                        bindtap="songMenuItemClick"

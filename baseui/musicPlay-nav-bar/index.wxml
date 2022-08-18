@@ -5,13 +5,12 @@
   <view style="height:{{statusBarHeight}}px;"></view>
 
   <view class="nav-bar">
-
     <view class="left"  bindtap="clickGoto">
       <view class="left-slot">
         <slot name="left"></slot>
       </view>
       <view class="incoView">
-        <image class="icon" src="/assets/images/icons/arrow-left.png" mode="widthFix"></image>
+        <image class="icon" src="/assets/images/icons/arrow-left.png" mode="heightFix"></image>
       </view>
     </view>
     <view class="center">

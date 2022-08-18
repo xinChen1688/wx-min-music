@@ -9,7 +9,7 @@ Component({
    */
   properties: {
     title: {
-      type: toString,
+      type: Object,
       value: "默认标题"
     }
   },
@@ -32,6 +32,7 @@ Component({
    */
   methods: {
     clickGoto(){ 
+      console.log(123);
       wx.navigateBack({
         delta: 1,
       })

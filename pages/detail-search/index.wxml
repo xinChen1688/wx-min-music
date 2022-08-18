@@ -23,9 +23,11 @@
 </view> 
 <!-- 搜索结果 -->
 <block wx:if="{{resultSongs.length>0}}">
+
   <area-header title="最佳匹配" showRight="" style="color: #777;"></area-header>
+
   <block wx:for="{{resultSongs}}" wx:key="id"> 
-    <view class="listMatching">
+    <view class="listMatching" bindtap="gotoPlay" data-index="{{index}}">
       <text>{{index}}--</text>
       <text>{{item.al.name}}--</text>
       <text>--{{item.ar[0].name}}</text>

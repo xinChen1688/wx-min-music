@@ -1,6 +1,6 @@
 /* pages/music-paly/index.wxss */
 page {
-  color: #fff; 
+  color: #fff;
 }
 
 .bg-image,
@@ -15,10 +15,11 @@ page {
 
 .bg-cover {
   background: rgba(0, 0, 0, .1);
-  backdrop-filter: blur(13px); 
+  backdrop-filter: blur(13px);
   display: none;
 }
-.controlBgCoverShow{
+
+.controlBgCoverShow {
   display: block;
 }
 
@@ -44,7 +45,7 @@ page {
   flex-direction: column;
   justify-content: space-between;
   padding: 0 28rpx;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 /* 内容区 */
@@ -67,8 +68,17 @@ page {
 
 /* <!-- 歌词区 --> */
 .music .music-speech {
-  flex: 1; 
+  flex: 1;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: yellow;
+}
+
+.music .music-speech .musicText {
+  margin: 0 20rpx;
+
 }
 
 /* <!-- 进度条区 --> */
@@ -88,7 +98,7 @@ page {
 .music .music-control .btn {
   width: 60rpx;
   height: 60rpx;
-  display: block; 
+  display: block;
 
 }
 
@@ -97,4 +107,36 @@ page {
   width: 130rpx;
   height: 130rpx;
 
+}
+
+
+
+
+/* 第二页分页样式 */
+.lyric .leftscrollView {
+  display: flex;
+  flex-direction: column;
+  text-align: center; 
+  height: 100%;
+}
+/* 文字样式 */
+
+.lyric .leftContenrItem { 
+  height: 35px;
+  line-height: 35px;
+  /* color: rgb(245, 217, 217); */
+  color: #fff;
+
+  font-size: 28rpx;
+}
+/* 特别的文字 */ 
+.lyric .leftscrollView .active {
+  font-size: 36rpx;
+  color: yellow;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
 }

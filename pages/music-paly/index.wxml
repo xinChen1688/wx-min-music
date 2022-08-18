@@ -22,7 +22,7 @@
       <view class="title">
         {{muiscDataList.al.name}}
         {{muiscDataList.al.name && muiscDataList.alia[0]}}
-      </view> 
+      </view>
       <view class="author">
         {{muiscDataList.ar[0].name}}
         <block wx:if="{{muiscDataList.ar[1].name}}">
@@ -33,7 +33,9 @@
 
     <!-- 歌词区 -->
     <view class="music-speech" bindtap="controlBgCoverShow">
-      <view>我是歌词</view>
+      <view wx:if="{{currentLyricinfo.text}}" class="musicText">
+        {{currentLyricinfo.text}}
+      </view>
     </view>
 
     <!-- 进度条区 -->
@@ -41,8 +43,7 @@
       <slider block-size="{{16}}" 
               value="{{sliderValue}}" 
               bindchange="changeSliderValue"
-              bindchanging="ChangsliderVlaueflag"
-              ></slider>
+              bindchanging="ChangsliderVlaueflag"></slider>
       <view class="time">
         <view class="time-left">{{format.formatDuration(currentTime)}}</view>
         <view class="time-right">{{format.formatDuration(duration)}}</view>
@@ -50,14 +51,25 @@
     </view>
     <!-- 控制区 -->
     <view class="music-control">
-      <image class="btn btn-order" src="/assets/images/player/play_order.png"></image>
+      <image class="btn btn-order" bindtap="changPlayMode" src="/assets/images/player/play_repeat.png"></image>
       <image class="btn btn-prev" src="/assets/images/player/play_prev.png"></image>
-      <image class="btn btn-pause" src="/assets/images/player/play_pause.png"></image>
-      <image class="btn btn-next" src="/assets/images/player/play_next.png"></image>
+      <image class="btn btn-pause" bindtap="ClickPlayingImg" src="/assets/images/player/{{onChangPlayingImg ? '/play_pause' : '/play_resume'}}.png"></image>
+      <image class="btn btn-next" bindtap="changges" src="/assets/images/player/play_next.png"></image>
       <image class="btn btn-music" src="/assets/images/player/play_music.png"></image>
     </view>
   </swiper-item>
-  <swiper-item class="lyric">
 
+  <!-- 歌词第二页=========================================== -->
+  <swiper-item class="lyric">
+    <scroll-view scroll-y class="leftscrollView"
+                  scroll-top="{{scrollTop}}"
+                  scroll-with-animation
+                  >
+      <block wx:for="{{lryicInfos}}" wx:key="index">
+        <view class="leftContenrItem {{currentIndex === index ? 'active':''}}"
+              style="padding-top: {{index === 0 ? swiperHeight / 2.8: ''}}px; padding-bottom: {{index === lryicInfos.length -1 ? swiperHeight / 2: ''}}px;"
+        >{{item.text}}</view>
+      </block>
+    </scroll-view>
   </swiper-item>
 </swiper>

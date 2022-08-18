@@ -6,8 +6,8 @@
 }
 
 .item .image {
-  width: 100rpx;
-  height: 100rpx;
+  width: 60%;
+  height: 150rpx;
   border-radius: 10rpx;
 }
 

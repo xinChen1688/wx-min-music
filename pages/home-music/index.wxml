@@ -1,23 +1,23 @@
 <!--pages/home-music/index.wxml-->
 
 <!-- 搜索区 -->
-<van-search 
+<!-- <van-search 
 disabled
 background="#fafafa"
 shape="round"
 placeholder="搜索您喜欢的歌曲 ~"
 bindtap="handleSearchClick"
-/>
+/> -->
 <!-- 轮播图区 -->
 <swiper class="swiper" 
         autoplay 	
         interval="3000" 
-        circular  
+        circular
         indicator-dots 	
         indicator-active-color="#666" 
         style="height: {{swiperHeight}}px;"
         >
-<block wx:for="{{banner}}" wx:key="id" >
+<block wx:for="{{banner}}" wx:key="*this" >
   <swiper-item>
     <image src="{{item.pic}}" 
            mode="widthFix"

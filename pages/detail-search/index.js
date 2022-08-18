@@ -5,6 +5,8 @@ import {
   getSearchResult
 } from '../../service/api-serch'
 
+import { getMusicPlay } from '../../service/api-palyMiusice'
+
 
 Page({
   data: {
@@ -171,6 +173,15 @@ Page({
       this.setData({
         timeID: null
       })
+    })
+  },
+  // 监听调转
+  gotoPlay(e){ 
+    let index = e.currentTarget.dataset.index
+    let id = this.data.resultSongs[index].al.id 
+    console.log(id);
+    getMusicPlay(id).then(res => {
+      console.log(res);
     })
   }
 })

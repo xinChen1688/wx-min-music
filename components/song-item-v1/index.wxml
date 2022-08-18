@@ -1,6 +1,6 @@
 <!--components/song-item-v1/index.wxml-->
 <view class="item" bindtap="gotoMusicPaly">
-  <image class="image" src="{{item.pic}}"></image>
+  <image class="image" src="{{item.pic}}" mode="aspectFill"></image>
   <view class="contentText">
     <text class="textTop">{{item.typeTitle}}</text>
     <view class="source">{{item.typeTitle}} - {{item.typeTitle}}</view>

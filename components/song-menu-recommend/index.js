@@ -1,4 +1,8 @@
 // components/song-menu-recommend/index.js
+import {
+  rankingStore,
+  playStore
+} from '../../store/index'
 Component({
   /**
    * 组件的属性列表
@@ -16,12 +20,18 @@ Component({
   data: {
 
   },
-  lifetimes: { 
-    ready(){ 
-     let recommendSpmgsFilter = this.properties.recommendSpmgs.filter(item => item.song) 
-     this.setData({
-      recommendSpmgsFilter
-     })
+  lifetimes: {
+    ready() {
+      let recommendSpmgsFilter = this.properties.recommendSpmgs.filter(item => item.song)
+      recommendSpmgsFilter.map((element, i) => {
+        return element.index = i
+      });
+      playStore.onState('MuisDataAll', res => {
+          playStore.setState('MuisDataAll', recommendSpmgsFilter)
+      }) 
+      this.setData({
+        recommendSpmgsFilter
+      })
     }
   },
 
@@ -29,6 +39,8 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    getPageIndex(e) {
+ 
+    }
   }
 })

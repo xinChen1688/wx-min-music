@@ -1,2 +1,4 @@
-export { rankingStore} from './ranking-srore'
-export {innerAudioContext} from './play-store'
+
+export * from './ranking-srore'
+export * from './play-store'
+

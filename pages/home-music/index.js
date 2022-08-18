@@ -25,7 +25,7 @@ Page({
     menuRanking: []
   },
   onLoad(options) {
-    
+
     //获取轮播图
     this.getPageData()
     // 获取轮播图高度
@@ -50,16 +50,9 @@ Page({
         menuRanking
       })
     })
-  },
-  // 轮播图
-  async getPageData() {
-    const {
-      data: res
-    } = await getBanners() 
-    this.setData({
-      banner: res.banners
-    })
-  },
+  }, 
+  
+ 
   // 歌单列表
   getsongMenuHot() {
     getsongMenu().then(res => {
@@ -75,6 +68,8 @@ Page({
     })
 
   },
+
+  // 样式设置
   // 轮播图图片高度
   async handSwiperImgHeight() {
     await queryRect('.swiper-image').then(res => {
@@ -100,15 +95,8 @@ Page({
   },
 
 
-  // 事件处理
-  // 榜单跳转
-  gotoRankingClick(datalist) {
-    let dataitem = encodeURIComponent(JSON.stringify(datalist))
-    wx.navigateTo({
-      url: '/pages/detail-songs/index?type=rank&dataitem=' + dataitem
-    })
-  },
 
+  // 事件处理 ==========
   // 推荐歌曲点击
   recommendClick(event) {
     this.gotoRankingClick(event.currentTarget.dataset.new)
@@ -120,7 +108,25 @@ Page({
   muisClick(event) {
     this.gotoRankingClick(event.currentTarget.dataset.hot)
   },
-  // 巅峰榜点击
+   // 轮播图参数
+   async getPageData() {
+    const {
+      data: res
+    } = await getBanners()
+    this.setData({
+      banner: res.banners
+    })
+  },
+
+  // 事件跳转 =========
+  // 榜单跳转
+  gotoRankingClick(datalist) {
+    let dataitem = encodeURIComponent(JSON.stringify(datalist))
+    wx.navigateTo({
+      url: '/pages/detail-songs/index?type=rank&dataitem=' + dataitem
+    })
+  },
+  // 巅峰榜调转
   rankingClicks(event) {
     let dataitem = encodeURIComponent(JSON.stringify(event.detail.sum))
     wx.navigateTo({
@@ -134,6 +140,4 @@ Page({
       url: '../detail-search/index',
     })
   }
-
-
 })
